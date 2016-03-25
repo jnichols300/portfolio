@@ -1,11 +1,10 @@
 
 
 (function() {
-"use strict";
+// "use strict";
   angular
-  .module('portfolio', [
-      "ui-router",
-      "partials"
+  .module("portfolio", [
+      "ui-router"
     ])
 
   .config([
@@ -15,26 +14,27 @@
 
     function RouterFunction($stateProvider){
       $stateProvider
-        .state("home", {
-          url: "",
-          template: "The portfolio of Jared Nichols"
+        .state("portfolio.home", {
+          url: "/index",
+          template: "The portfolio of Jared Nichols",
+          templateUrl: "partials/index.html"
           })
-        .state("development", {
+        .state("portfolio.development", {
           url: "/development",
-          templateUrl: "app/partials/development.html",
+          templateUrl: "partials/development.html"
           // controller: "",
         })
-        .state("design", {
+        .state("portfolio.design", {
           url: "/design",
-          templateUrl: "app/partials/design.html",
+          templateUrl: "partials/design.html"
         })
-        .state("about", {
+        .state("portfolio.about", {
           url: "/about",
-          templateUrl: "app/partials/about.html",
+          templateUrl: "partials/about.html"
         })
-        .state("contact", {
+        .state("portfolio.contact", {
           url: "/contact",
-          templateUrl: "app/partials/contact.html",
+          templateUrl: "partials/contact.html"
         });
       }
 })();
