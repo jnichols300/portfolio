@@ -1,18 +1,17 @@
 
-var portfolioApp = angular.module('portfolio', ['ui.router']);
+var app = angular.module('portfolio', ['ui.router']);
 
 
-  portfolioApp.config(function($stateProvider, $urlRouterProvider) {
+  app.config(function($stateProvider, $urlRouterProvider) {
 
       $stateProvider
         .state("home", {
           url: "/home",
-          templateUrl: "app/partials/home.html"
+          templateUrl: "partials/home.html"
         })
         .state("home.development", {
           url: "/development",
           templateUrl: "partials/development.html"
-          // controller: "",
         })
         .state("home.design", {
           url: "/design",
@@ -28,4 +27,4 @@ var portfolioApp = angular.module('portfolio', ['ui.router']);
         });
         $urlRouterProvider.otherwise('/home');
 
-})();
+});
